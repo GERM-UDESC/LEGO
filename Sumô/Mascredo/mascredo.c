@@ -1,7 +1,7 @@
-#pragma config(Sensor, S1, U1, sensorEV3_Ultrasonic)
-#pragma config(Sensor, S4, U2, sensorEV3_Ultrasonic)
-#pragma config(Sensor, S2, C1, sensorEV3_Color)
-#pragma config(Sensor, S3, C2, sensorEV3_Color)
+#pragma config(Sensor, S2, U1, sensorEV3_Ultrasonic)
+#pragma config(Sensor, S3, U2, sensorEV3_Ultrasonic)
+#pragma config(Sensor, S1, C1, sensorEV3_Color)
+#pragma config(Sensor, S4, C2, sensorEV3_Color)
 #pragma config(Motor, motorA, arma, tmotorEV3_Large, PIDControl, encoder)
 #pragma config(Motor, motorB, esq, tmotorEV3_Large, PIDControl, encoder)
 #pragma config(Motor, motorC, dir, tmotorEV3_Large, PIDControl, encoder)
@@ -13,6 +13,9 @@ task main()
 	wait1Msec(5000);
 	moveMotorTarget(arma, graus, vel);
 	while (true) {
+
+
+
 
 		if ((getColorReflected(C1) < 10)&& (getColorReflected(C2) < 10)){
 
