@@ -16,8 +16,8 @@ task main()
   setLEDColor(ledGreen);
 
   while(!faixa){
-  	setMotorSpeed(esq, 90);
-	setMotorSpeed(dir, 90);
+  	setMotorSpeed(esq, 100);
+	setMotorSpeed(dir, 100);
 		
 		if((getColorReflected(C1) > 10)||(getColorReflected(C2) > 10)){
 			faixa = 1;
@@ -28,8 +28,8 @@ task main()
   playSound(soundBeepBeep);
   setLEDColor(ledRed);
   moveMotorTarget(arma, graus, vel);
-  setMotorSpeed(esq, -40);
-  setMotorSpeed(dir, -90);
+  setMotorSpeed(esq, -10);
+  setMotorSpeed(dir, -100);
   wait1Msec(2000);
   setMotorSpeed(esq, 00);
   setMotorSpeed(dir, 00);
