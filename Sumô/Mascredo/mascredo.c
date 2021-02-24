@@ -28,6 +28,11 @@ task main()
   playSound(soundBeepBeep);
   setLEDColor(ledRed);
   moveMotorTarget(arma, graus, vel);
+  setMotorSpeed(esq, -40);
+  setMotorSpeed(dir, -90);
+  wait1Msec(2000);
+  setMotorSpeed(esq, 00);
+  setMotorSpeed(dir, 00);
 
 	while (true) {
 
