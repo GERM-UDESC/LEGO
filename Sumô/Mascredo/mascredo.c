@@ -30,7 +30,7 @@ task main()
   moveMotorTarget(arma, graus, vel);
   setMotorSpeed(esq, -10);
   setMotorSpeed(dir, -100);
-  wait1Msec(2000);
+  wait1Msec(1000);
   setMotorSpeed(esq, 00);
   setMotorSpeed(dir, 00);
 
