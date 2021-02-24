@@ -5,17 +5,31 @@
 #pragma config(Motor, motorA, arma, tmotorEV3_Large, PIDControl, encoder)
 #pragma config(Motor, motorB, esq, tmotorEV3_Large, PIDControl, encoder)
 #pragma config(Motor, motorC, dir, tmotorEV3_Large, PIDControl, encoder)
-int graus=95
-int tempo=800
-int vel=40
+int graus=95;
+int tempo=800;
+int vel=40;
+int faixa = 0;
+int vira = 0;
 task main()
 {
-	wait1Msec(5000);
-	moveMotorTarget(arma, graus, vel);
+  wait1Msec(5000);	
+  playSound(soundBeepBeep);
+  setLEDColor(ledRed);
+  setLEDColor(ledGreen);
+
+  while(!faixa){
+  	setMotorSpeed(esq, 90);
+		setMotorSpeed(dir, 90);
+		
+		if((getColorReflected(C1) > 10)||(getColorReflected(C2) > 10)){
+			faixa = 1;
+			}
+  	}
+  setMotorSpeed(dir, 00);
+  setMotorSpeed(esq, 00);
+  moveMotorTarget(arma, graus, vel);
+
 	while (true) {
-
-
-
 
 		if ((getColorReflected(C1) < 10)&& (getColorReflected(C2) < 10)){
 
@@ -29,16 +43,22 @@ task main()
 
 				setMotorSpeed(esq, 55);
 				setMotorSpeed(dir, 90);
+				vira = 1;
 			}
 			if((getUSDistance(U1) > 40) && (getUSDistance(U2) < 40)){
 
 				setMotorSpeed(esq, 90);
 				setMotorSpeed(dir, 55);
+				vira = 0;
 			}
-			if((getUSDistance(U1) > 40) && (getUSDistance(U2) > 40)){
+			if((getUSDistance(U1) > 40) && (getUSDistance(U2) > 40) && (vira == 1) ){
 
 				setMotorSpeed(esq, -50);
 				setMotorSpeed(dir, 50);
+			}
+			else{
+				setMotorSpeed(esq, 50);
+				setMotorSpeed(dir, -50);
 			}
 		}
 		if((getColorReflected(C1) < 10) && (getColorReflected(C2) > 10)){
