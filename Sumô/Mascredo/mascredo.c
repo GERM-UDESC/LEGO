@@ -13,13 +13,11 @@ int vira = 0;
 task main()
 {
   wait1Msec(5000);	
-  playSound(soundBeepBeep);
-  setLEDColor(ledRed);
   setLEDColor(ledGreen);
 
   while(!faixa){
   	setMotorSpeed(esq, 90);
-		setMotorSpeed(dir, 90);
+	setMotorSpeed(dir, 90);
 		
 		if((getColorReflected(C1) > 10)||(getColorReflected(C2) > 10)){
 			faixa = 1;
@@ -27,6 +25,8 @@ task main()
   	}
   setMotorSpeed(dir, 00);
   setMotorSpeed(esq, 00);
+  playSound(soundBeepBeep);
+  setLEDColor(ledRed);
   moveMotorTarget(arma, graus, vel);
 
 	while (true) {
