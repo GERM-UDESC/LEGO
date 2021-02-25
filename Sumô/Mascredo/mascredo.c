@@ -10,17 +10,17 @@ int tempo=800;
 int vel=40;
 int faixa = 0;
 int vira = 0;
-int chão = 42;
+int chao = 42;
 int frente = -38;
 task main()
 {
-  wait1Msec(5000);	
+  wait1Msec(5000);
   setLEDColor(ledGreen);
 
   while(!faixa){
   	setMotorSpeed(esq, 100);
 	setMotorSpeed(dir, 100);
-		
+
 		if((getColorReflected(C1) > 10)||(getColorReflected(C2) > 10)){
 			faixa = 1;
 			}
