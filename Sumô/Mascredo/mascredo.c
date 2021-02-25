@@ -63,7 +63,7 @@ task main()
 				setMotorSpeed(esq, -50);
 				setMotorSpeed(dir, 50);
 			}
-			if((getUSDistance(U1) > 40) && (getUSDistance(U2) > 40) && (vira == 0){
+			if((getUSDistance(U1) > 40) && (getUSDistance(U2) > 40) && (vira == 0)){
 				setMotorSpeed(esq, 50);
 				setMotorSpeed(dir, -50);
 			}
