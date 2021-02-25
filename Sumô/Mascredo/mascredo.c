@@ -45,11 +45,12 @@ task main()
 				setMotorSpeed(esq, 90);
 				setMotorSpeed(dir, 90);
 			}
-			if((getUSDistance(U1) < 10) && (getUSDistance(U2) < 10)){
+			if((getUSDistance(U1) < 20) && (getUSDistance(U2) < 20)){
 				setMotorSpeed(esq, 100);
 				setMotorSpeed(dir, 100);
 				moveMotorTarget(arma, frente, 100);
 			}
+			moveMotorTarget(arma, chao, 100);
 
 			if ((getUSDistance(U1) < 40) && (getUSDistance(U2) > 40)){
 
