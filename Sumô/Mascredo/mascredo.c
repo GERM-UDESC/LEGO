@@ -56,15 +56,15 @@ task main()
 				setMotorSpeed(dir, 55);
 				vira = 0;
 			}
-			if((getUSDistance(U1) > 40) && (getUSDistance(U2) > 40)/* && (vira == 1)*/ ){
+			if((getUSDistance(U1) > 40) && (getUSDistance(U2) > 40) && (vira == 1)){
 
 				setMotorSpeed(esq, -50);
 				setMotorSpeed(dir, 50);
 			}
-			/*else{
+			else{
 				setMotorSpeed(esq, 50);
 				setMotorSpeed(dir, -50);
-			}*/
+			}
 		}
 		if((getColorReflected(C1) < 10) && (getColorReflected(C2) > 10)){
 
