@@ -69,12 +69,12 @@ task main()
 		if((getColorReflected(C1) < 10) && (getColorReflected(C2) > 10)){
 
 			setMotorSpeed(esq, -100);
-			setMotorSpeed(dir, -55);
+			setMotorSpeed(dir, -45);
 			wait1Msec(tempo);
 		}
 		if((getColorReflected(C1) > 10) && (getColorReflected(C2) < 10)){
 
-			setMotorSpeed(esq, -55);
+			setMotorSpeed(esq, -45);
 			setMotorSpeed(dir, -100);
 			wait1Msec(tempo);
 		}
