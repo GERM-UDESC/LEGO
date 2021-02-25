@@ -10,6 +10,8 @@ int tempo=800;
 int vel=40;
 int faixa = 0;
 int vira = 0;
+int chão = 42;
+int frente = -38;
 task main()
 {
   wait1Msec(5000);	
