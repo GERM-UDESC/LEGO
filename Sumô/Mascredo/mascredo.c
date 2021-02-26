@@ -14,6 +14,11 @@ int chao = 42;
 int frente = -38;
 task main()
 {
+	while (!getButtonPress(buttonEnter)){
+		setMotorSpeed(dir, 00);
+  	setMotorSpeed(esq, 00);
+	}
+
   wait1Msec(5000);
   setLEDColor(ledGreen);
 
