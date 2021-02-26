@@ -11,7 +11,7 @@ int vel=40;
 int faixa = 0;
 int vira = 0;
 int chao = -10;
-int frente = 120;
+int frente = -120;
 task main()
 {
 	while (!getButtonPress(buttonEnter)){
@@ -34,7 +34,7 @@ task main()
   setMotorSpeed(esq, 00);
   playSound(soundBeepBeep);
   setLEDColor(ledRed);
-  moveMotorTarget(arma, graus, vel);
+  moveMotorTarget(arma, chao, vel);
   setMotorSpeed(esq, -10);
   setMotorSpeed(dir, -100);
   wait1Msec(1000);
@@ -45,17 +45,21 @@ task main()
 
 		if ((getColorReflected(C1) < 10)&& (getColorReflected(C2) < 10)){
 
+			moveMotorTarget(arma, chao, 100);
+
 			if((getUSDistance(U1) < 40) && (getUSDistance(U2) < 40)){
 
 				setMotorSpeed(esq, 90);
 				setMotorSpeed(dir, 90);
+				moveMotorTarget(arma, frente, 100);
 			}
+
 			if((getUSDistance(U1) < 20) && (getUSDistance(U2) < 20)){
 				setMotorSpeed(esq, 100);
 				setMotorSpeed(dir, 100);
+				moveMotorTarget(arma, chao, 100);
 				moveMotorTarget(arma, frente, 100);
 			}
-			moveMotorTarget(arma, chao, 100);
 
 			if ((getUSDistance(U1) < 40) && (getUSDistance(U2) > 40)){
 
