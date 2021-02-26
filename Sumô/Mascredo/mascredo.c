@@ -10,8 +10,8 @@ int tempo=800;
 int vel=40;
 int faixa = 0;
 int vira = 0;
-int chao = 42;
-int frente = -38;
+int chao = -10;
+int frente = 120;
 task main()
 {
 	while (!getButtonPress(buttonEnter)){
