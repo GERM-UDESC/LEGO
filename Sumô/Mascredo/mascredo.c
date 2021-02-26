@@ -12,6 +12,7 @@ int faixa = 0;
 int vira = 0;
 int chao = -10;
 int frente = -120;
+int cima = -280;
 task main()
 {
 	while (!getButtonPress(buttonEnter)){
@@ -34,7 +35,7 @@ task main()
   setMotorSpeed(esq, 00);
   playSound(soundBeepBeep);
   setLEDColor(ledRed);
-  moveMotorTarget(arma, chao, vel);
+  moveMotorTarget(arma, frente, vel);
   setMotorSpeed(esq, -10);
   setMotorSpeed(dir, -100);
   wait1Msec(1000);
