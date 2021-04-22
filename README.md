@@ -1,2 +1,2 @@
 # LEGO
-Pasta para nossos robôs feitos com LEGO.
+Repositório de códigos feitos para os robôs LEGO do GERM.
