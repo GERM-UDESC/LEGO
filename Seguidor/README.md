@@ -1,2 +1,3 @@
 # LEGO
-Pasta para nossos robôs feitos com LEGO.
+
+- Categoria: Seguidor de Linha LEGO

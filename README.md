@@ -1,2 +1,5 @@
 # LEGO
-Repositório de códigos feitos para os robôs LEGO do GERM.
+
+Categorias:
+- Sumô 1kg
+- Seguidor de Linha
